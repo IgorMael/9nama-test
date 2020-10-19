@@ -1,0 +1,6 @@
+<tr>
+    <td>Pedido <%= order.id %></td>
+    <td> <%= order.created_at.strftime('%m/%d/%Y') %></td>
+    <td><%= number_to_currency(order.value, :unit => "R$ ", :separator => ",", :delimiter => ".") %></td>
+    <td><%= link_to "Visualizar", order_path(order) %></td>
+</tr>

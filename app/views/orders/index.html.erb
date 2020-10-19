@@ -1,0 +1,29 @@
+<div class="container">
+  <div style="margin: 15px">
+    <h1>Gerenciar pedidos</h2>
+  </div>
+  <%= render "dropzone" %>
+  <div id="orders-wrapper" >
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Pedido</th>
+                <th>Data</th>
+                <th>Valor total</th>
+                <th>Detalhes</th>
+            <tr>
+        <thead>
+        <tbody>
+          <%= render @orders %>
+          <% if @orders.empty? %>
+            <tr>
+              <td>Nenhum arquivo enviado.</td>
+            </tr>
+          <% end %>
+        </tbody>
+      </thead>
+    </table>
+
+  <div>
+</div>
+

@@ -10,6 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_10_19_102738) do
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_clients_on_name"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
+    t.integer "supplier_id"
+    t.integer "client_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_items_on_client_id"
+    t.index ["order_id"], name: "index_items_on_order_id"
+    t.index ["product_id"], name: "index_items_on_product_id"
+    t.index ["supplier_id"], name: "index_items_on_supplier_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "description"
+    t.decimal "price", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["description", "price"], name: "index_products_on_description_and_price"
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "address"], name: "index_suppliers_on_name_and_address"
+  end
 
 end

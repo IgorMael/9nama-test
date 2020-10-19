@@ -1,0 +1,15 @@
+<div class="upload-wrapper">
+    <%= form_with url: orders_path(format: :js), remote: true, local: false, class: "dropzone", id: "my-awesome-dropzone" do |form| %>
+    <% end %>
+</div>
+
+<script>
+    
+    Dropzone.options.myAwesomeDropzone = {
+        paramName: "file", // The name that will be used to transfer the file
+        dictDefaultMessage: "Clique ou arraste para enviar arquivos",
+        dictFileTooBig: "Arquivo muito grande. Limite: 20mb",
+        maxFilesize: 20, // MB
+        success: response => eval(response.xhr.response)
+    };
+</script>

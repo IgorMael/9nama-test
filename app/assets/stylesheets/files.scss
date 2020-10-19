@@ -1,0 +1,17 @@
+// Place all the styles related to the files controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.upload-wrapper {
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 6px;
+    
+    form {
+        border-radius: 6px;
+        color: #666;
+        font-size: 20px;
+        background: #eee;
+        border: 2px solid aliceblue;
+    }
+}
