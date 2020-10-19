@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Está aplicação utiliza Rails 5.2 e Ruby 2.7
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Instalação
+## Download do projeto
+```
+ git clone https://github.com/IgorMael/9nama-test.git
+ cd 9nama-test 
+```
+## Instalar dependências
+ ```
+ bundle install
+ ```
+ 
+## Gerar banco de dados
+ ```
+ rails db:create
+ rails db:migrate
+ ```
+ 
+ ## Executar o projeto
+ ```
+ rails s
+ ```
+ O projeto poderá ser acessado na página localhost:3000/
+ 
+# Testes
+  Testes podem ser executadados indo até a pasta raiz do projeto e executando o comando
+  ```
+  rspec
+  ```
