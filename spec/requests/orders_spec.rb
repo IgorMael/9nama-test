@@ -15,9 +15,5 @@ RSpec.describe "Orders", type: :request do
       expect(response).to have_http_status(200)
       expect(response).to render_template(:show)
     end
-
-    it "should show error when invalid order" do
-      get "/orders/100"
-    end
   end
 end
