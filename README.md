@@ -1,6 +1,6 @@
 # README
 
-Está aplicação utiliza Rails 5.2 e Ruby 2.7
+Esta aplicação utiliza Rails 5.2 e Ruby 2.7
 
 # Instalação
 ## Download do projeto
